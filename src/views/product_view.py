@@ -1,19 +1,25 @@
-class ProductView:
-    def register_product(self):
-        try:
-            name = str(input("Digita o nome: "))
-            price = float(input("Digite o preço: "))
-            quantity = int(input("Digite a quantidade: "))
-        except ValueError as E:
-            print(f"Tipo de dado inválido no registro. Tente novamente.")
+def register_product():
 
-        product_data = {
-            "name": name,
-            "price": price,
-            "quantity": quantity
-        }
-        return product_data
+    try:
+        print("\n  -- Sistema Nexus --")
+        name = str(input(" * Digita o nome: "))
+        price = float(input(" * Digite o preço: "))
+        quantity = int(input(" * Digite a quantidade: "))
+        print("\n  -- Produto cadastrado com sucesso -- ")
+    except ValueError as E:
+        print("\n  -- Erro no cadastro. Tente novamente -- ")
 
+    product_data = {
+        "name": name,
+        "price": price,
+        "quantity": quantity
+    }
+    return product_data
+
+def delete_product():
+    print("\n  -- Sistema Nexus --")
+    id_product = int(input(" * Digite o id do produto que deseja deletar: "))
+    return id_product
 
 
 
