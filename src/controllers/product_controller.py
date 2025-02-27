@@ -30,3 +30,14 @@ class ProductController:
             print(f""" * 
  * ID: {id} | Nome: {name} | Preço: R$ {price} | Quantidade: {quantity}
  * -------------------------------------------------------------------""")
+    def search_product(self, name_product):
+        searching = self.session.query(ProductModel.name).all()
+        for name in searching:
+            catch_name = name[0]
+            if catch_name == name_product:
+                print("\n  -- Sistema Nexus --")
+                print(f" * Produto {catch_name} encontrado com sucesso.")
+                return
+        print("\n  -- Sistema Nexus --")
+        print(f" * O produto {name_product} não encontrado.")
+

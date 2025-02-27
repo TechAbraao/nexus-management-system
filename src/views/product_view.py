@@ -20,6 +20,9 @@ def delete_product():
     id_product = int(input(" * Digite o id do produto que deseja deletar: "))
     return id_product
 
-
+def search_product_name():
+    print("\n  -- Sistema Nexus --")
+    name_product = str(input(" * Digite o nome do procuto que deseja consultar: "))
+    return name_product
 
 
