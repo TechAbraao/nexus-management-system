@@ -10,6 +10,7 @@ def options_decision():
     *                         *
     *  [1] Cadastrar Produto  *
     *  [2] Excluir Produto    *
+    *  [3] Todos os Produtos  *
     *                         *
     ( ======================= )
     """
@@ -32,3 +33,6 @@ def menu_decision():
             controller = ProductController()
             controller.delete_product(id_product)
 
+        if command == 3:
+            controller = ProductController()
+            print(controller.all_products())

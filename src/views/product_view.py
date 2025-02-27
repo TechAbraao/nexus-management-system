@@ -1,5 +1,4 @@
 def register_product():
-
     try:
         print("\n  -- Sistema Nexus --")
         name = str(input(" * Digita o nome: "))

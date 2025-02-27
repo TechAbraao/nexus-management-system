@@ -20,3 +20,13 @@ class ProductController:
             print("\n  -- Produto deletado com sucesso -- ")
         else:
             print(f"\n  -- Produto com id {id_product} não encontrado -- ")
+    def all_products(self):
+        all_products = self.session.query(ProductModel.id, ProductModel.name, ProductModel.price, ProductModel.quantity).all()
+        for item in all_products:
+            id = item[0]
+            name = item[1]
+            price = item[2]
+            quantity = item[3]
+            print(f""" * 
+ * ID: {id} | Nome: {name} | Preço: R$ {price} | Quantidade: {quantity}
+ * -------------------------------------------------------------------""")
